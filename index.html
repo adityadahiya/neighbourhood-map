@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>Map of my favourite city - New Delhi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/map_styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script type='text/javascript' src='js/knockout-3.4.1.js'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <style>
+  #map {
+    height: 400px;
+    width: 100%;
+   }
+</style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <span class="menu-title">List of places</span>
+        <input type="text" data-bind="textInput: filter" placeholder="Search from the list">
+        <ul class="" style="list-style-type: none;" data-bind="foreach: filteredItems">
+            <li>
+                <a href="#"><span data-bind="text: title, click: $parent.showInfoWindow"></span></a>
+            </li>
+        </ul>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+
+    <div id="main">
+        <h2>Famous places in New Delhi</h2>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Click here</span>
+    </div>
+    <div id="map"></div>
+    <div id="map-error" class="map-error"></div>
+
+
+    <script src="js/newmap.js"></script>
+    <script src="js/maperror.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwUdUoC9ZiRbFC3et89fPK3tXIVO8D2sI&callback=initMap" onerror="mapError()"></script>
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+</body>
+</html>

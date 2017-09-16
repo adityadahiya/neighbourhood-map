@@ -1,0 +1,45 @@
+html,body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 20px;
+      }
+
+      .container {
+        height: 100%;
+        position: relative;
+      }
+
+      input {
+        font-size: 12px;
+      }
+
+      h1 {
+        color: #525454;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+
+
+      hr {
+        background: #D0D7D9;
+        height: 1px;
+        margin: 20px 0 20px 0;
+        border: none;
+      }
+
+      #map {
+        margin-top: 20px;
+        height: 100%;
+      }
+
+      #pano {
+        width: 200px;
+        height: 200px;
+      }
+
+      .text {
+        font-size: 12px;
+      }
