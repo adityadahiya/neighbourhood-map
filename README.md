@@ -24,3 +24,5 @@ By using knockout.js, we have implemented the search feature. On typing an alpha
 
 On clicking on a place in the list, activates the info window on the marker of that place.
 
+## Link
+https://adityadahiya.github.io/neighbourhood-map/
